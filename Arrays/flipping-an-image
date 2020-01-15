@@ -1,0 +1,16 @@
+#https://leetcode.com/problems/flipping-an-image/
+class Solution:
+    def flipAndInvertImage(self, A: List[List[int]]) -> List[List[int]]:
+        flip = []
+        
+        for item in A:
+            item.reverse()
+            temp = []
+            for element in item:
+                if (element == 0):
+                    temp.append(1)
+                else:
+                    temp.append(0)
+            flip.append(temp)
+        print(flip)
+        return flip
